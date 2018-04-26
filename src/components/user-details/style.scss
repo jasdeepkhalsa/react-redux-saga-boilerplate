@@ -1,0 +1,9 @@
+@import '../../styles/colours';
+
+:local {
+  .component {
+    background: $black;
+    padding: 20px;
+    color: $white;
+  }
+}

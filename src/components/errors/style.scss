@@ -1,0 +1,11 @@
+@import '../../styles/colours';
+
+:local {
+  .component {
+    border: 1px solid $red;
+    padding: 20px;
+    color: $white;
+    background: $red;
+    display: none;
+  }
+}
