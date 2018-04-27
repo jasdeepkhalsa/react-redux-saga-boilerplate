@@ -8,6 +8,7 @@ It also contains some opinionated customisations from the out-of-the-box [Create
 
 * Using SCSS instead of CSS
 * Importing styles using `:local` variables directly into the JavaScript to eliminate the need for name-spacing CSS
+* Uses [`Normalize.css`](https://necolas.github.io/normalize.css/) instead of a [CSS Reset](https://meyerweb.com/eric/tools/css/reset/)
 * Using highly specific ESLint rules for keeping code beautiful across platforms (notably with trailing commas in objects, no semi-colons & [indenting with tabs, aligning with spaces](https://dmitryfrank.com/articles/indent_with_tabs_align_with_spaces))
 * Loosely follows the [presentational vs. container components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) pattern
 * Prioritises [stateless functional components](https://code.tutsplus.com/tutorials/stateful-vs-stateless-functional-components-in-react--cms-29541) over class-based components
