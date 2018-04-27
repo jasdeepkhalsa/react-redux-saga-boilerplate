@@ -2,6 +2,7 @@ import React from 'react'
 import style from './style.scss'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import Selectors from '../../redux/selectors'
 
 const Errors = ({ error }) => {
 	const isError = !!error
@@ -20,7 +21,7 @@ Errors.propTypes = {
 }
 
 const mapStateToProps = (state, ownProps) => {
-	return { error: state.userData ? state.userData.error : null }
+	return { error: Selectors.error(state) }
 }
 
 export default connect(mapStateToProps, {})(Errors)

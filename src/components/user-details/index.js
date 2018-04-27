@@ -2,6 +2,7 @@ import React from 'react'
 import style from './style.scss'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import Selectors from '../../redux/selectors'
 
 const UserDetails = ({ userData }) => {
 	const isUserDataLoaded = !!userData.name
@@ -32,7 +33,7 @@ UserDetails.propTypes = {
 }
 
 const mapStateToProps = (state, ownProps) => {
-	return { userData: state.userData }
+	return { userData: Selectors.userData(state) }
 }
 
 export default connect(mapStateToProps, {})(UserDetails)
