@@ -15,7 +15,7 @@ export class UserDetails extends Component {
 					<p>Bio: { bio }</p>
 					<img src={ avatar_url } alt={ name } />
 				</div>
-				: <div></div>
+				: null
 		)
 	}
 }
