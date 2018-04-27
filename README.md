@@ -1,4 +1,28 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+# React app with `redux`, `redux-saga` & `jest`
+
+This app is a proof of concept app of best practice to show how best to use React together with `redux` and `redux-saga` to handle side-effects, and `jest` for unit tests.
+
+This app is also designed with **scalability** in mind - to be able to become a large React application due to its clever level of abstraction of files & folders.
+
+It also contains some opinionated customisations from the out-of-the-box [Create React App](https://github.com/facebookincubator/create-react-app) functionality, which are:
+
+* Using SCSS instead of CSS
+* Importing styles using `:local` variables directly into the JavaScript to eliminate the need for name-spacing CSS
+* Using highly specific ESLint rules for keeping code beautiful across platforms (notably with no semi-colons allowed & [indenting with tabs, aligning with spaces](https://dmitryfrank.com/articles/indent_with_tabs_align_with_spaces))
+* Loosely follows the [presentational vs. container components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) pattern
+* Utilises a highly underused feature of `webpack`'s `import` which automatically selects the `index.js` file if a folder is provided to it as a path (derived from how `node` handles `index.js` files)
+* Same names used for most component files to save time when creating new components
+
+## Pre-requisites
+
+* node
+* yarn
+
+## Installation
+
+```bash
+$ yarn
+```
 
 ## Usage
 
@@ -32,3 +56,9 @@ See the section about [deployment](#deployment) for more information.
 By default, the generated project uses the latest version of React.
 
 You can refer [to the React documentation](https://reactjs.org/docs/react-dom.html#browser-support) for more information about supported browsers.
+
+## Acknowledgements
+
+* This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app)
+* A shout out to the creators of `react`, `redux`, `react-redux` & `redux-saga` - your fantastic documentation has really helped in the creation of this app
+* The open source community for actively taking time to share useful patterns and code for writing React apps
