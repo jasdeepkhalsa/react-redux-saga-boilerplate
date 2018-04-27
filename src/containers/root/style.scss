@@ -1,12 +1,12 @@
 @import '../../styles/colours';
 
 :local {
-  .app {
+  .component {
     text-align: center;
 
     &-logo {
       height: 80px;
-      animation: App-logo-spin infinite 20s linear;
+      animation: component-logo-spin infinite 20s linear;
     }
 
     &-header {
@@ -26,7 +26,7 @@
   }
 }
 
-@keyframes :local(App-logo-spin) {
+@keyframes :local(component-logo-spin) {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }

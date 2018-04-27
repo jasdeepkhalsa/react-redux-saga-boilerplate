@@ -8,8 +8,9 @@ It also contains some opinionated customisations from the out-of-the-box [Create
 
 * Using SCSS instead of CSS
 * Importing styles using `:local` variables directly into the JavaScript to eliminate the need for name-spacing CSS
-* Using highly specific ESLint rules for keeping code beautiful across platforms (notably with no semi-colons allowed & [indenting with tabs, aligning with spaces](https://dmitryfrank.com/articles/indent_with_tabs_align_with_spaces))
+* Using highly specific ESLint rules for keeping code beautiful across platforms (notably with trailing commas in objects, no semi-colons & [indenting with tabs, aligning with spaces](https://dmitryfrank.com/articles/indent_with_tabs_align_with_spaces))
 * Loosely follows the [presentational vs. container components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) pattern
+* Prioritises [stateless functional components](https://code.tutsplus.com/tutorials/stateful-vs-stateless-functional-components-in-react--cms-29541) over class-based components
 * Utilises a highly underused feature of `webpack`'s `import` which automatically selects the `index.js` file if a folder is provided to it as a path (derived from how `node` handles `index.js` files)
 * Same names used for most component files to save time when creating new components
 

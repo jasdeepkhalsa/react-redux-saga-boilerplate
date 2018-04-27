@@ -1,30 +1,29 @@
-import React, { Component } from 'react'
+import React from 'react'
 import style from './style.scss'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import * as Actions from '../../redux/actions'
 
-export class Username extends Component {
-	constructor(props) {
-		super(props)
-		this.input = React.createRef()
-		this.onButtonClick = this.onButtonClick.bind(this)
+const input = React.createRef()
+
+const Username = ({ fetchUserInfo }) => {
+	const onButtonClick = () => {
+		const { value } = input.current
+		fetchUserInfo(value)
 	}
 
-	onButtonClick() {
-		const { value } = this.input.current
-		this.props.fetchUserInfo(value)
-	}
+	return (
+		<div className={style.component}>
+			<input type='text' ref={ input } />
+			<button onClick={ onButtonClick }>
+				Find GitHub User
+			</button>
+		</div>
+	)
+}
 
-	render() {
-		return (
-			<div className={style.component}>
-				<input type='text' ref={ this.input } />
-				<button onClick={ this.onButtonClick }>
-					Find GitHub User
-				</button>
-			</div>
-		)
-	}
+Username.propTypes = {
+	fetchUserInfo: PropTypes.func.isRequired,
 }
 
 const mapDispatchToProps = dispatch => ({
