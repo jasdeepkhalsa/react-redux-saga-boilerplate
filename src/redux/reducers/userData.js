@@ -5,8 +5,9 @@ const initialState = {
 	login: '',
 	bio: '',
 	avatar_url: '',
-	public_repos: '',
-	public_gists: '',
+	public_repos: 0,
+	public_gists: 0,
+	error: '',
 }
 
 const userData = (state = initialState, action) => {
@@ -15,6 +16,12 @@ const userData = (state = initialState, action) => {
 			return {
 				...state,
 				...action.response,
+				error: action.error,
+			}
+		case Actions.FAILED_USER_INFO:
+			return {
+				...initialState,
+				error: action.error,
 			}
 		default:
 			return state

@@ -26,8 +26,8 @@ UserDetails.propTypes = {
 		login: PropTypes.string.isRequired,
 		bio: PropTypes.string.isRequired,
 		avatar_url: PropTypes.string.isRequired,
-		public_repos: PropTypes.string.isRequired,
-		public_gists: PropTypes.string.isRequired,
+		public_repos: PropTypes.number.isRequired,
+		public_gists: PropTypes.number.isRequired,
 	}),
 }
 
