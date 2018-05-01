@@ -4,8 +4,16 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Selectors from '../../redux/selectors'
 
+const ifNotNull = (value) => {
+	if (value === null) {
+		return '(blank)'
+	}
+
+	return value
+}
+
 const UserDetails = ({ userData }) => {
-	const isUserDataLoaded = !!userData.name
+	const isUserDataLoaded = !!userData.id
 	const { name, login, bio, avatar_url, public_repos, public_gists } = userData
 
 	return (
@@ -13,9 +21,9 @@ const UserDetails = ({ userData }) => {
 			?
 			<div className={style.component} >
 				<p>You have retrieved details for:</p>
-				<p><strong>{ name }</strong> (<code>{ login }</code>) who has { public_repos } repos and { public_gists } gists</p>
-				<p>Bio: { bio }</p>
-				<img src={ avatar_url } alt={ name } />
+				<p><strong>{ name ? `${name} ` : null}</strong>(<code>{ ifNotNull(login) }</code>) who has { ifNotNull(public_repos) } repos and { ifNotNull(public_gists) } gists</p>
+				<p>Bio: { ifNotNull(bio) }</p>
+				<img src={ ifNotNull(avatar_url) } alt={ ifNotNull(name) } />
 			</div>
 			: null
 	)
@@ -23,12 +31,12 @@ const UserDetails = ({ userData }) => {
 
 UserDetails.propTypes = {
 	userData: PropTypes.shape({
-		name: PropTypes.string.isRequired,
-		login: PropTypes.string.isRequired,
-		bio: PropTypes.string.isRequired,
-		avatar_url: PropTypes.string.isRequired,
-		public_repos: PropTypes.number.isRequired,
-		public_gists: PropTypes.number.isRequired,
+		name: PropTypes.string,
+		login: PropTypes.string,
+		bio: PropTypes.string,
+		avatar_url: PropTypes.string,
+		public_repos: PropTypes.number,
+		public_gists: PropTypes.number,
 	}),
 }
 

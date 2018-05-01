@@ -17,7 +17,7 @@ const Errors = ({ error }) => {
 }
 
 Errors.propTypes = {
-	error: PropTypes.string.isRequired,
+	error: PropTypes.string,
 }
 
 const mapStateToProps = (state, ownProps) => {

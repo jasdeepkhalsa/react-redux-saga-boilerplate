@@ -8,7 +8,7 @@ export function successFn(response) {
 	return {
 		type: Actions.RECEIVE_USER_INFO,
 		response: response,
-		error: '',
+		error: null,
 	}
 }
 

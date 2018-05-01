@@ -1,13 +1,13 @@
 import * as Actions from '../actions'
 
 const initialState = {
-	name: '',
-	login: '',
-	bio: '',
-	avatar_url: '',
+	name: null,
+	login: null,
+	bio: null,
+	avatar_url: null,
 	public_repos: 0,
 	public_gists: 0,
-	error: '',
+	error: null,
 }
 
 const userData = (state = initialState, action) => {
