@@ -1,6 +1,6 @@
-# React app with `redux`, `redux-saga`, `reselect` & `jest`
+# Boilerplate react app with `redux`, `redux-saga`, `reselect` & `jest`
 
-This app is an opinionated proof of concept app of best practice to show how best to use React together with `redux` and `redux-saga` to handle side-effects, as well as `reselect` for performance.
+This app is an opinionated boilerplate app of best practice to show how best to use React together with `redux` and `redux-saga` to handle side-effects, as well as `reselect` for performance.
 
 Unit tests are using `jest`.
 
