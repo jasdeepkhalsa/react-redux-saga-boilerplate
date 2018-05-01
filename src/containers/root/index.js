@@ -7,6 +7,7 @@ import logo from '../../assets/logo.svg'
 import Username from '../../components/username'
 import UserDetails from '../../components/user-details'
 import Errors from '../../components/errors'
+import { connect } from 'react-redux'
 
 const CLASS_COMPONENT = 'component'
 
@@ -29,4 +30,4 @@ const RootContainer = () => {
 	)
 }
 
-export default RootContainer
+export default connect(null, {})(RootContainer)

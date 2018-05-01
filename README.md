@@ -1,10 +1,12 @@
 # React app with `redux`, `redux-saga`, `reselect` & `jest`
 
-This app is a proof of concept app of best practice to show how best to use React together with `redux` and `redux-saga` to handle side-effects, as well as `reselect` for performance and `jest` for unit tests.
+This app is an opinionated proof of concept app of best practice to show how best to use React together with `redux` and `redux-saga` to handle side-effects, as well as `reselect` for performance.
+
+Unit tests are using `jest`.
 
 This app is also designed with **scalability** in mind - to be able to become a large React application due to its performant stack choice and clever level of abstraction of files & folders.
 
-It also contains some opinionated customisations from the out-of-the-box [Create React App](https://github.com/facebookincubator/create-react-app) functionality, which are:
+It also contains some customisations from the out-of-the-box [Create React App](https://github.com/facebookincubator/create-react-app) functionality, which are:
 
 * Using SCSS instead of CSS
 * Importing styles using `:local` variables directly into the JavaScript to eliminate the need for name-spacing CSS
