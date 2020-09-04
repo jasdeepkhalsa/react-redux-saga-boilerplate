@@ -98,7 +98,7 @@
   },
   "devDependencies": {
     "babel-preset-airbnb": "^2.4.0",
-    "node-sass": "^4.8.3",
+    "node-sass": "^4.13.1",
     "redux-devtools": "^3.4.1",
     "sass-loader": "^7.0.1"
   }
